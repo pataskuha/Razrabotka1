@@ -1,8 +1,10 @@
 spring:
+  config:
+    import: optional:file:.env[.properties]
   application:
     name: demo
   datasource:
-    url: jdbc:postgresql://localhost:5432/sandbox
+    url: jdbc:postgresql://localhost:5432/postgres
     username: ${JDBC_USER}
     password: ${JDBC_PASSWORD}
   jpa:
